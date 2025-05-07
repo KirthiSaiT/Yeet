@@ -17,20 +17,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>
-        
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="flex min-h-screen w-full flex-col">
-            <Header/>
-            </div>
-           <main className="flex flex-1 flex-col px-4 pt-10 xl:px-8">{children}</main> 
-            <Toaster/>
-          </ThemeProvider>
+      <body className="min-h-screen overflow-x-hidden bg-background font-sans antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Fixed Header */}
+          <Header />
+
+          {/* Main content starts below the fixed header */}
+          <main className="pt-24 px-4 xl:px-8 flex-1">
+            {children}
+          </main>
+
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

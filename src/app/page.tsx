@@ -1,12 +1,11 @@
-import Header from "@/components/Header"
+import React from 'react'
 
-export default function HomePage() {
+function page() {
   return (
-    <>
-      <Header />
-      <main className="pt-24 px-6 text-white min-h-screen bg-background">
-        <h1 className="relative bottom-[38rem] text-2xl font-bold ">Home Page</h1>
-      </main>
-    </>
+    <div >
+      Home Page
+    </div>
   )
 }
+
+export default page
